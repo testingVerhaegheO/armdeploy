@@ -12,7 +12,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "https://testingverhaegheo02.file.core.windows.net/armtemplates/webapp.json",
+                    "uri": "https://github.com/testingVerhaegheO/armdeploy/edit/master/webapp.json",
                     "contentVersion": "1.0.0.0"
                 }
             }
