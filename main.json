@@ -2,6 +2,17 @@
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "artifactsLocation": {
+            "type": "string",
+            "metadata": {
+                "description": "URL to the Azure blob container where the ARM templates are stored. Must end with a '/'"
+            }
+        },
+        "artifactsSasToken": {
+            "type": "securestring",
+            "metadata": {
+                "description": "SAS token to access the artifacts storage account"
+            }
     },
     "variables": {},
     "resources": [
@@ -13,6 +24,10 @@
                 "mode": "Incremental",
                 "templateLink": {
                     "uri": "https://github.com/testingVerhaegheO/armdeploy/edit/master/webapp.json",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "[concat(parameters('artifactsLocation'), '/', '/webapp.parameters.json', parameters('artifactsSasToken'))]",
                     "contentVersion": "1.0.0.0"
                 }
             }
