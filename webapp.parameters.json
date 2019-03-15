@@ -1,0 +1,15 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environmentName": {
+            "value": "dev"
+        },
+        "artifactsLocation": {
+            "value": "https://dlwtestcloudshell.blob.core.windows.net"
+        },
+        "artifactsSasToken": {
+            "value": "?sv=2017-07-29&sr=c&sig=rH2PiaeyL9EQn4kbcfE%2FDytcU4hh2HQgjbRYCunK2Og%3D&se=2018-07-30T11%3A42%3A58Z&sp=r"
+        }
+    }
+}
